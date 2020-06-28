@@ -1,0 +1,10 @@
+@import '../../assets/styles/variables';
+
+.error {
+  background-color: var(--danger);
+  color: var(--white);
+  font-weight: 600;
+  font-style: italic;
+  border-radius: 5px;
+  padding-left: 10px;
+}

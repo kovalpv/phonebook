@@ -1,0 +1,25 @@
+$spinner-thickness: 1px;
+$spinner-diameter: 15px;
+$spinner-radius: #{$spinner-diameter / 2};
+
+.spinner {
+    position: relative;
+    border: $spinner-thickness solid var(--white);
+    border-radius: 50%;
+    border-top: $spinner-thickness solid var(--primary);
+    left: calc(50% - #{$spinner-radius});
+    top: calc(50% - #{$spinner-radius});
+    width: $spinner-diameter;
+    height: $spinner-diameter;
+    -webkit-animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

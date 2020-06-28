@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --env.development --progress --open --hot",
-    "build": "webpack --mode production --env.production --progress",
+    "start": "webpack-dev-server --mode development --progress --open --hot",
+    "build": "webpack --mode production --progress",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "test": "jest"
   },
@@ -25,6 +25,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.10",
     "D": "^1.0.0",
+    "bootstrap": "^4.5.0",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
@@ -45,6 +46,9 @@
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -63,6 +67,26 @@
     "react-test-renderer": "^16.13.1",
     "redux-mock-store": "^1.5.4",
     "sass-lint": "^1.13.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "sinon": "^9.0.2"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!**/node_modules/",
+      "!**/index.js",
+      "!/registerServiceWorker.js",
+      "!**/lcov-report/**"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ]
   }
 }

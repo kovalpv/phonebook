@@ -1,5 +1,7 @@
-import { combineReducers } from 'redux';
-
 export const defaultState = {};
 
-export default combineReducers({});
+const reducer = (state = defaultState) => {
+  return state;
+};
+
+export default reducer;

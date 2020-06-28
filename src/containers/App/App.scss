@@ -1,3 +1,15 @@
-.phonebook-app {
-    background-color: red;
+@import '../../assets/styles/variables';
+
+.app-container {
+    height: $app-container;
+    overflow: hidden;
+
+    &__header {
+        height: $header-height;
+    }
+
+    &__content {
+        height: $content-height;
+        overflow: hidden;
+    }
 }
