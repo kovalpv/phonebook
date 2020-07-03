@@ -26,4 +26,12 @@ module.exports = {
     render: true,
     mount: true,
   },
+  overrides: [
+    {
+      files: ['*.spec.jsx'],
+      rules: {
+        'react/react-in-jsx-scope': 'off',
+      },
+    },
+  ],
 };

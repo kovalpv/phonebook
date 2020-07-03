@@ -7,7 +7,8 @@
     "start": "webpack-dev-server --mode development --progress --open --hot",
     "build": "webpack --mode production --progress",
     "lint": "eslint src/**/*.js src/**/*.jsx",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md)\""
   },
   "repository": {
     "type": "git",

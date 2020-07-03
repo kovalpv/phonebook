@@ -1,6 +1,12 @@
 import reducer from './reducer';
 
-const defaultState = {};
+const defaultState = {
+  contacts: {
+    fetching: false,
+    items: [],
+    error: null,
+  },
+};
 
 describe('Reducer', () => {
   it('should return default state', () => {

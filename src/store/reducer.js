@@ -1,7 +1,10 @@
-export const defaultState = {};
+import { combineReducers } from 'redux';
+import { contactsReducer, contactsDefaultState } from '../containers/Contacts';
 
-const reducer = (state = defaultState) => {
-  return state;
+export const defaultState = {
+  ...contactsDefaultState,
 };
 
-export default reducer;
+export default combineReducers({
+  contacts: contactsReducer,
+});
