@@ -1,4 +1,3 @@
-# instrument-example ![check-code-coverage](./coverage/badge-statements.svg) 
 
 # Change log
 

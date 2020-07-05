@@ -1,5 +1,7 @@
 # phonebook
 
+![check-code-coverage](./artifacts/badges/badge-statements.svg) 
+
 Приложение телефонная книга на React.
 
 ## Requirements
