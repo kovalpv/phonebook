@@ -8,6 +8,8 @@
     "build": "webpack --mode production --progress",
     "lint": "eslint src/**/*.js src/**/*.jsx",
     "test": "jest",
+    "test:coverage": "yarn test --coverage",
+    "test:badges": "yarn test:coverage  && jest-coverage-badges output ./artifacts/badges",
     "format": "prettier --write \"**/*.+(js|jsx|json|yml|yaml|css|md)\""
   },
   "repository": {
@@ -61,7 +63,9 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "extract-loader": "^5.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "jest-coverage-badges": "^1.1.2",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
     "prettier": "^2.0.5",
@@ -88,6 +92,16 @@
     ],
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:badges"
+    }
   }
 }

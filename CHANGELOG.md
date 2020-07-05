@@ -1,3 +1,5 @@
+# instrument-example ![check-code-coverage](./coverage/badge-statements.svg) 
+
 # Change log
 
 Все изменения проекта должны быть зафиксированны в этом документе
