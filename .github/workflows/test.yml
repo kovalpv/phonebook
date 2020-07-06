@@ -26,6 +26,6 @@ jobs:
     
     - name: Test
       run: yarn run test --coverage
-#     - run: yarn
-#     - run: yarn build
-#     - run: yarn test --coverage
+    
+    - name: Build
+      run: yarn build
